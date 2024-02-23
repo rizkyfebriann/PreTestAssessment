@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.7 on win32)" generated="20240223 09:33:30.207" rpa="false" schemaversion="4">
+<suite id="s1" name="sauceDemoTest" source="C:\Users\Yesdok\Downloads\LearningAutomation\PreTestAssessment\Assessment 2\Assessment 2\SauceDemoTest\sauceDemoTest.robot">
+<test id="s1-t1" name="Valid Login" line="10">
+<kw name="Open Browsers" library="resources">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Login_URL}</arg>
+<arg>${Browser_Chrome}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240223 09:33:30.736" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20240223 09:33:30.735" endtime="20240223 09:33:33.552"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240223 09:33:33.553" endtime="20240223 09:33:33.687"/>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>${DELAY}</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20240223 09:33:33.687" endtime="20240223 09:33:33.689"/>
+</kw>
+<kw name=" Login Page Should Be Open" library="resources">
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>Swag Labs</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20240223 09:33:34.715" level="INFO">Page title is 'Swag Labs'.</msg>
+<status status="PASS" starttime="20240223 09:33:33.690" endtime="20240223 09:33:34.716"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:33.689" endtime="20240223 09:33:34.716"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:30.734" endtime="20240223 09:33:34.717"/>
+</kw>
+<kw name="Input Login Username" library="resources">
+<arg>${ValidUsername}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtUsername}</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240223 09:33:34.720" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20240223 09:33:34.718" endtime="20240223 09:33:37.929"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:34.717" endtime="20240223 09:33:37.929"/>
+</kw>
+<kw name="Input Login Password" library="resources">
+<arg>${ValidPassword}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPassword}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240223 09:33:37.932" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20240223 09:33:37.931" endtime="20240223 09:33:41.078"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:37.930" endtime="20240223 09:33:41.079"/>
+</kw>
+<kw name="Click login button" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnLogin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240223 09:33:41.082" level="INFO">Clicking element 'login-button'.</msg>
+<status status="PASS" starttime="20240223 09:33:41.080" endtime="20240223 09:33:43.283"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:41.079" endtime="20240223 09:33:43.283"/>
+</kw>
+<kw name="Success Login" library="resources">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${lblHomePage}</arg>
+<arg>${WAIT}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20240223 09:33:43.285" endtime="20240223 09:33:44.315"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:43.284" endtime="20240223 09:33:44.316"/>
+</kw>
+<kw name="Add Backpack to Cart" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnAddCartSLBackpack}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240223 09:33:44.318" level="INFO">Clicking element 'add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20240223 09:33:44.317" endtime="20240223 09:33:46.449"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:44.316" endtime="20240223 09:33:46.450"/>
+</kw>
+<kw name="Go to Shopping Cart page" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCart}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240223 09:33:46.455" level="INFO">Clicking element '//div[@id='shopping_cart_container']'.</msg>
+<status status="PASS" starttime="20240223 09:33:46.452" endtime="20240223 09:33:48.552"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:46.451" endtime="20240223 09:33:48.552"/>
+</kw>
+<kw name="Go to Checkout page" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnCheckout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240223 09:33:48.555" level="INFO">Clicking element 'checkout'.</msg>
+<status status="PASS" starttime="20240223 09:33:48.554" endtime="20240223 09:33:50.643"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:48.553" endtime="20240223 09:33:50.644"/>
+</kw>
+<kw name="Fill information checkout : first name" library="resources">
+<arg>${firstName}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtFirstName}</arg>
+<arg>${firstName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240223 09:33:50.646" level="INFO">Typing text 'Rizky' into text field 'first-name'.</msg>
+<status status="PASS" starttime="20240223 09:33:50.645" endtime="20240223 09:33:53.892"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:50.644" endtime="20240223 09:33:53.893"/>
+</kw>
+<kw name="Fill information checkout : last name" library="resources">
+<arg>${lastName}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtLastName}</arg>
+<arg>${lastName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240223 09:33:53.899" level="INFO">Typing text 'Febrian' into text field 'last-name'.</msg>
+<status status="PASS" starttime="20240223 09:33:53.896" endtime="20240223 09:33:57.122"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:53.894" endtime="20240223 09:33:57.123"/>
+</kw>
+<kw name="Fill information checkout : postal code" library="resources">
+<arg>${postalCode}</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txtPostalCode}</arg>
+<arg>${postalCode}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240223 09:33:57.126" level="INFO">Typing text '12345678' into text field 'postal-code'.</msg>
+<status status="PASS" starttime="20240223 09:33:57.125" endtime="20240223 09:34:00.381"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:57.124" endtime="20240223 09:34:00.381"/>
+</kw>
+<kw name="Continue to overview checkout page and finish" library="resources">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnContinueCheckout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240223 09:34:00.384" level="INFO">Clicking element 'continue'.</msg>
+<status status="PASS" starttime="20240223 09:34:00.383" endtime="20240223 09:34:02.549"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btnFinishCheckout}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240223 09:34:02.554" level="INFO">Clicking element 'finish'.</msg>
+<status status="PASS" starttime="20240223 09:34:02.550" endtime="20240223 09:34:04.703"/>
+</kw>
+<status status="PASS" starttime="20240223 09:34:00.382" endtime="20240223 09:34:04.704"/>
+</kw>
+<kw name="Successfully checkout backpack item" library="resources">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lblThankYouForOrder}</arg>
+<arg>${WAIT}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240223 09:34:04.705" endtime="20240223 09:34:06.782"/>
+</kw>
+<status status="PASS" starttime="20240223 09:34:04.705" endtime="20240223 09:34:06.783"/>
+</kw>
+<kw name="Close Browsers" library="resources" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20240223 09:34:06.786" endtime="20240223 09:34:10.055"/>
+</kw>
+<status status="PASS" starttime="20240223 09:34:06.785" endtime="20240223 09:34:10.056"/>
+</kw>
+<status status="PASS" starttime="20240223 09:33:30.733" endtime="20240223 09:34:10.056"/>
+</test>
+<status status="PASS" starttime="20240223 09:33:30.211" endtime="20240223 09:34:10.057"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="sauceDemoTest">sauceDemoTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
